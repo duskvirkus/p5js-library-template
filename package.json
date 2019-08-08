@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/figraham/p5js-library-template/issues"
   },
-  "homepage": "https://github.com/figraham/p5js-library-template#readme"
+  "homepage": "https://github.com/figraham/p5js-library-template#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "karma": "^4.2.0"
+  }
 }
