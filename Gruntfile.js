@@ -33,4 +33,10 @@ module.exports = grunt => {
     'eslint:src',
   ]);
 
+  grunt.registerTask('test', [
+    'lint',
+  ]);
+
+  grunt.registerTask('default', ['test']);
+
 }

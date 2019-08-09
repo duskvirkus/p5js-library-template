@@ -4,6 +4,7 @@
   "description": "Template with build system for developing p5.js libraries.",
   "main": "index.js",
   "scripts": {
+    "grunt": "grunt",
     "lint": "grunt lint"
   },
   "repository": {

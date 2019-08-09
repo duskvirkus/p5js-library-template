@@ -1,0 +1,14 @@
+sudo: false
+
+language: node_js
+node_js:
+  - "11"
+
+before_install:
+  - npm i -g
+
+script:
+  - npm run grunt
+
+notifications:
+  email: false
