@@ -2,6 +2,16 @@
 
 Template with build system for developing p5.js libraries. The build system uses the same tools as the core p5.js library, in the hope this will make it easier for new users to learn these tools and experienced users will already know them.
 
+## Step by Step Guide for Using this Template
+
+### Setting Up Your Library
+
+- Configure Linting (Optional) - If you're a code style nazi this is your time to shine. Look at the section on [ESLint configuration](#ESLint-Configuration). See troubleshooting section if you have a problem with [line endings](#Line-Endings).
+
+### Writing Your Library
+
+### Publishing Your Library
+
 ## Linting with ESLint
 
 **Command:** `npm run lint`
@@ -14,7 +24,7 @@ Linting will run a program, in this case ESLint, to check the format of project 
 
 Linting has been setup to run through grunt. There are a number of different sub tasks of linting but the main one you need to know is `npm run lint`. Linting will also be run automatically through the `npm test` or `npm run test` command. It is included in Travis CI testing.
 
-### Configuration
+### ESLint Configuration
 
 The configuration for all the linting tasks is contained within the `lint` folder. They follow an [inheritance structure](https://eslint.org/docs/user-guide/configuring#extending-configuration-files), for all rules specified in `eslint.js` will also apply to `eslint.src.js`.
 
@@ -26,3 +36,14 @@ The configuration for all the linting tasks is contained within the `lint` folde
 The default setup tries to be as minimal as possible it includes environment setup, parser options, and the recommended eslint rules. You can see the recommend rules by [visiting this page](https://eslint.org/docs/rules/) and everything with a checkmark is included.
 
 **Read more about:** [How to use rules](https://eslint.org/docs/developer-guide/working-with-rules#working-with-rules), [possible rules](https://eslint.org/docs/rules/), and [other configuration](https://eslint.org/docs/user-guide/configuring#configuring-eslint).
+
+## Troubleshooting
+
+### Line Endings
+
+The default linting options include a rule about line endings matching unix style endings. If you are using windows and you haven't configured git to use unix line endings you'll have problems.
+
+There are two solutions to this problem.
+
+1. Follow this guide on configuring your windows git to use unix line endings. You may find it faster to just delete and then clone your library back down again after changing your git config file.
+2. Change `"linebreak-style": ["error", "unix"],` line in `lint/lint.js` to `"linebreak-style": ["error", "windows"],`. This is the less elegant solution as you may still have problems with the existing files.
