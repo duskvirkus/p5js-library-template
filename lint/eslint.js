@@ -4,5 +4,8 @@ module.exports = {
   ],
   "parserOptions": {
     "ecmaVersion": 10,
-  }
+  },
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+  },
 };
