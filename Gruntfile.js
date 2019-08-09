@@ -1,12 +1,13 @@
+const path = require('path');
 
 module.exports = grunt => {
 
   const gruntConfig = {
 
     eslint: {
-      source: {
+      src: {
         options: {
-          configFile: 'lint/eslint-build.js',
+          configFile: 'lint/eslint.src.js',
         },
         src: ['src/**/*.js'],
       },
@@ -19,7 +20,7 @@ module.exports = grunt => {
   grunt.loadNpmTasks('grunt-eslint');
 
   grunt.registerTask('lint', [
-    'eslint:build',
+    'eslint:src',
   ]);
 
 }
