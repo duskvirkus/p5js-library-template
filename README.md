@@ -26,7 +26,7 @@ Linting has been setup to run through grunt. There are a number of different sub
 
 ### ESLint Configuration
 
-The configuration for all the linting tasks is contained within the `lint` folder. They follow an [inheritance structure](https://eslint.org/docs/user-guide/configuring#extending-configuration-files), for all rules specified in `eslint.js` will also apply to `eslint.src.js`.
+The configuration for all the linting tasks is contained within the `lint` folder. They follow an [inheritance structure](https://eslint.org/docs/user-guide/configuring#extending-configuration-files), for all rules specified in `eslint.js` will also apply to `eslint.src.js` and all other lint tasks.
 
 | lint task | config                  | files              | explanation          |
 |-----------|-------------------------|--------------------|----------------------|
@@ -34,6 +34,19 @@ The configuration for all the linting tasks is contained within the `lint` folde
 | build     | `lint/eslint.build.js`  | `['Gruntfile.js']` | build system files   |
 
 The default setup tries to be as minimal as possible it includes environment setup, parser options, and the recommended eslint rules. You can see the recommend rules by [visiting this page](https://eslint.org/docs/rules/) and everything with a checkmark is included.
+
+You can add override or remove rules by following this format.
+
+```js
+module.exports = {
+  // existing contents
+  "rules": {
+    "semi": ["error", "always"], // add semicolons rule
+    "comma-dangle": ["error", "always-multiline"], // override comma dangling rule
+    "no-undef": "off", // turn off a rule
+  },
+}
+```
 
 **Read more about:** [How to use rules](https://eslint.org/docs/developer-guide/working-with-rules#working-with-rules), [possible rules](https://eslint.org/docs/rules/), and [other configuration](https://eslint.org/docs/user-guide/configuring#configuring-eslint).
 
@@ -45,5 +58,5 @@ The default linting options include a rule about line endings matching unix styl
 
 There are two solutions to this problem.
 
-1. Follow this guide on configuring your windows git to use unix line endings. You may find it faster to just delete and then clone your library back down again after changing your git config file.
+1. Follow [this guide](https://help.github.com/en/articles/configuring-git-to-handle-line-endings) on configuring your windows git to use unix line endings. You may find it faster to just delete and then clone your library back down again after changing your git config file.
 2. Change `"linebreak-style": ["error", "unix"],` line in `lint/lint.js` to `"linebreak-style": ["error", "windows"],`. This is the less elegant solution as you may still have problems with the existing files.

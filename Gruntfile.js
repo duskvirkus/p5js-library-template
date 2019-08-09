@@ -10,6 +10,7 @@ module.exports = grunt => {
         },
         src: [
           'Gruntfile.js',
+          'lint/**/*.js',
         ],
       },
 

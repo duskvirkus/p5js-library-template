@@ -4,5 +4,8 @@ module.exports = {
   ],
   "env": {
     "node": true,
-  }
+  },
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+  },
 };
