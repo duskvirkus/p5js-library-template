@@ -4,7 +4,7 @@
   "description": "Template with build system for developing p5.js libraries.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "grunt lint"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/figraham/p5js-library-template#readme",
   "devDependencies": {
+    "eslint": "^6.1.0",
     "grunt": "^1.0.4",
+    "grunt-eslint": "^22.0.0",
     "karma": "^4.2.0"
   }
 }
