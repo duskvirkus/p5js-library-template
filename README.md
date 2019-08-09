@@ -12,6 +12,16 @@ Template with build system for developing p5.js libraries. The build system uses
 
 ### Publishing Your Library
 
+## Task Running with Grunt
+
+### What is Grunt?
+
+Grunt is a javascript development tool that makes streamlines a build system into smaller tasks. These tasks can overlap and depend on each other. Learn more about it at [gruntjs.com](https://gruntjs.com/).
+
+### Running Grunt
+
+You may need to install grunt globally by running `npm i -g grunt`. Besides that it should just work but you can add or change tasks in `Gruntfile.js`.
+
 ## Linting with ESLint
 
 **Command:** `npm run lint`
