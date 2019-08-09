@@ -28,10 +28,10 @@ Linting has been setup to run through grunt. There are a number of different sub
 
 The configuration for all the linting tasks is contained within the `lint` folder. They follow an [inheritance structure](https://eslint.org/docs/user-guide/configuring#extending-configuration-files), for all rules specified in `eslint.js` will also apply to `eslint.src.js` and all other lint tasks.
 
-| lint task | config                  | files              | explanation          |
-|-----------|-------------------------|--------------------|----------------------|
-| src       | `lint/eslint.src.js`    | `['src/**/*.js']`  | all .js files in src |
-| build     | `lint/eslint.build.js`  | `['Gruntfile.js']` | build system files   |
+| lint task | config                  | files                              | explanation          |
+|-----------|-------------------------|------------------------------------|----------------------|
+| src       | `lint/eslint.src.js`    | `['src/**/*.js']`                  | all .js files in src |
+| build     | `lint/eslint.build.js`  | `['Gruntfile.js', 'lint/**/*.js']` | build system files   |
 
 The default setup tries to be as minimal as possible it includes environment setup, parser options, and the recommended eslint rules. You can see the recommend rules by [visiting this page](https://eslint.org/docs/rules/) and everything with a checkmark is included.
 
