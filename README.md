@@ -1,5 +1,7 @@
 # p5.js Library Template
 
+**Currently Work in Progress**
+
 Template with build system for developing p5.js libraries. The build system uses the same tools as the core p5.js library, in the hope this will make it easier for new users to learn these tools and experienced users will already know them.
 
 ## Step by Step Guide for Using this Template
