@@ -8,8 +8,8 @@ Template with build system for developing p5.js libraries. The build system uses
 
 ### Setting Up Your Library
 
-- Create Repository
-- Rename (TBD)
+- Create Repository (Coming Soon)
+- Rename (Coming Soon)
 - Configure Linting (Optional) - If you're a code style nazi this is your time to shine. Look at the section on [ESLint configuration](#ESLint-Configuration). See troubleshooting section if you have a problem with [line endings](#Line-Endings).
 - [Setup Travis CI](#How-to-Setup-Travis)
 
@@ -26,20 +26,6 @@ Grunt is a javascript development tool that makes streamlines a build system int
 ### Running Grunt
 
 You may need to install grunt globally by running `npm i -g grunt`. Besides that it should just work but you can add or change tasks in `Gruntfile.js`.
-
-## Continuous Integration with Travis CI
-
-### What is Travis CI?
-
-Travis is a continuous integration tool that links to a GitHub repository and runs tests on your repository in a contained environment. This allows for consistent automated testing which is much easier than manually testing each change yourself.
-
-### How to Setup Travis
-
-You'll need to create a Travis account the easiest way is to link you're GitHub account. Visit their [website](https://travis-ci.org/) and hit the sign up button.
-
-Once you've done there will be a plus sign on your dash board where you can `Add a Repository`. Click it and search for what you've named your repository. Hit the toggle and you'll then go back to your dashboard. The repository should be there now. You can click on `More options` and `trigger a build` to make sure everything is working. It will take a minute or two but you should see `Done. Your build exited with 0.` at the end.
-
-This is optional but it's a good idea to make tests required to commit to the master branch. To do this go to the settings page for your repository back on github. Then go to the branches section and hit add a rule. Type master into the bar at the top and check and check `Require status checks to pass before merging`, `continuous-integration/travis-ci`, and `Include administrators`. Then add the rule and from now on you'll have to make all your changes on a separate branch and then make a pull request to merge it into the master.
 
 ## Linting with ESLint
 
@@ -78,6 +64,20 @@ module.exports = {
 ```
 
 **Read more about:** [How to use rules](https://eslint.org/docs/developer-guide/working-with-rules#working-with-rules), [possible rules](https://eslint.org/docs/rules/), and [other configuration](https://eslint.org/docs/user-guide/configuring#configuring-eslint).
+
+## Continuous Integration with Travis CI
+
+### What is Travis CI?
+
+Travis is a continuous integration tool that links to a GitHub repository and runs tests on your repository in a contained environment. This allows for consistent automated testing which is much easier than manually testing each change yourself.
+
+### How to Setup Travis
+
+You'll need to create a Travis account the easiest way is to link you're GitHub account. Visit their [website](https://travis-ci.org/) and hit the sign up button.
+
+Once you've done there will be a plus sign on your dash board where you can `Add a Repository`. Click it and search for what you've named your repository. Hit the toggle and you'll then go back to your dashboard. The repository should be there now. You can click on `More options` and `trigger a build` to make sure everything is working. It will take a minute or two but you should see `Done. Your build exited with 0.` at the end.
+
+This is optional but it's a good idea to make tests required to commit to the master branch. To do this go to the settings page for your repository back on github. Then go to the branches section and hit add a rule. Type master into the bar at the top and check and check `Require status checks to pass before merging`, `continuous-integration/travis-ci`, and `Include administrators`. Then add the rule and from now on you'll have to make all your changes on a separate branch and then make a pull request to merge it into the master.
 
 ## Troubleshooting
 
